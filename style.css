@@ -1,0 +1,230 @@
+
+:root{
+    --primarnaboja: #6b00b8;
+    --sekundarnaboja:#9eb304;
+    --back: #ccc;
+}
+body {
+    margin: 0;
+    font-family: Roboto, Arial, sans-serif;
+    background-color: var(--back);
+    color: #565656;
+}
+h1, h2, h3, h4, h5, h6{
+    text-transform: uppercase;
+    color: #000;
+}
+a, a:link, a:visited {
+    color: var(--primarnaboja);
+    text-decoration: none;
+    /* SKLANJA LINIJE ISPDO READ MORE I MENJA NJEGOVU BOJUS*/
+}
+a:hover{
+    color: var(--sekundarnaboja);
+}
+a:active {
+    color: aquamarine;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom; /* sklanja liniju ispod teksta*/
+}
+.container{
+    background-color: #fff;
+    margin: 0 auto;
+    width: 85%;
+    max-width: 1200px;
+}
+header {
+    background-color: var(--primarnaboja);
+    padding: 15px;
+    text-align: center;
+}
+.nav {
+    background-color: #565656;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    
+}
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.nav ul li a{
+    display: block; /* DA BI RADIO TEXT ALIGN*/
+    padding: 10px;
+}
+.nav ul li a:link, .nav ul li a:visited{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: end;
+}
+
+.hero{
+    background-image: url("images/hero.jpg");
+    padding: 100px 0 50px;
+    background-size: cover;
+    background-position: center center;
+}
+.hero h1{
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 400;
+}
+.hero h1 span {
+    font-weight: 700;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.wrapper-text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+main{
+    padding: 15px 15px 40px;
+}
+main h1, main h2{
+    /*padding-bottom: 5px; ODVAJA LINIJU */
+    border-bottom: 4px solid var(--sekundarnaboja);
+}
+.news-article {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.section {
+    display: flex;
+    
+}
+.section, .news {
+    padding: 15px;
+}
+.news h2 {
+    /*padding-bottom: 5px; ODVAJA LINIJU */
+    border-bottom: 4px solid var(--sekundarnaboja);
+}
+.news-article p {
+    margin: 0;
+    padding: 0;
+}
+.news-article img {
+    width: 70px;
+}
+.aside {
+    
+    width: 100%;
+}
+.sidebar {
+    padding: 15px;
+    background-color: #eee;
+}
+.sidebar h1, .sidebar h2{
+    border-bottom: 4px solid #565656;
+}
+.header .logo {
+    width: 150px;
+}
+.intro-img {
+
+}
+.footer {
+    border-top: 1px solid gray;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 0;
+}
+.footer p {
+    margin: 0; /*SKIDA SE NJEMU MARGINA JER PARAGRAF IMA MARGINU A NE DIV*/
+}
+@media screen and (min-width: 700px){
+    .news-wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .news-wrapper .article {
+        flex-basis: 49%;
+    }
+    .news-article img {
+        width: auto;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1279px){
+    .header{
+        text-align: start;
+    }
+    .nav ul li{
+        display: inline-block;
+    }
+    .hero{
+
+    }
+    .hero h1 {
+        text-align: left;
+        padding-left: 50px;
+    }
+    .intro-img {
+        float: right;
+    }
+    .intro-text {
+        padding-right: 300px;
+    }
+    .wrapper {
+        flex-direction: row;
+    }
+    .wrapper-text {
+        width: 80%;
+    }
+    .aside {
+        width: 20%;
+    }
+
+}
+@media screen and (min-width: 1280px){
+    header{
+        text-align: start;
+    }
+    .wrapper {
+        flex-direction: row;
+    }
+    .wrapper-text {
+        width: 80%;
+    }
+    .hero h1 {
+        text-align: left;
+        padding-left: 50px;
+    }
+    .aside {
+        width: 20%;
+    }
+    .nav ul li{
+        display: inline-block;
+    }
+    .textintro{
+        width: 80%;
+    }
+    .wrapper-side {
+        display: flex;
+    }
+    .intro-img {
+        float: right;
+    }
+    .intro-text {
+        padding-right: 300px;
+    }
+    .wrapper-side{
+        display: flex;
+        width: 20%;
+        
+    }
+}
